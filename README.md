@@ -149,3 +149,9 @@ Summarize the Car Rental System, its capabilities, and benefits.
 
 ---
 Note: The documentation provided here is a template, and you may need to tailor it based on the specific requirements and details of your Car Rental System. Make sure to include relevant diagrams, code snippets, and other necessary details to make the documentation comprehensive and easy to understand for the intended audience.
+
+
+🧑‍🤝‍🧑Collaborators
+Name	                           Email	               Contacts/Links      other
+Marasigan Xyzon Ezekiel R.	xyzonezm98@gmail.com           Zxynerprogram09    Github
+Carandang, Angelica D.      22-04457@g.batstate-u.edu.ph   aicac              Github
