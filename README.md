@@ -4,6 +4,7 @@
 using namespace std;
 
 // Structure to represent a car
+
 struct Car
 {
     // Car details
