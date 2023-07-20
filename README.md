@@ -152,6 +152,7 @@ Note: The documentation provided here is a template, and you may need to tailor 
 
 
 🧑‍🤝‍🧑Collaborators
-Name	                           Email	               Contacts/Links      other
-Marasigan Xyzon Ezekiel R.	xyzonezm98@gmail.com           Zxynerprogram09    Github
-Carandang, Angelica D.      22-04457@g.batstate-u.edu.ph   aicac              Github
+
+<img width="504" alt="image" src="https://github.com/Zxynerprogram09/Car-Rental-System/assets/129655847/7318ae61-b7ed-4211-a1d5-0094efd94c99">
+
+
