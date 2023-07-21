@@ -1,158 +1,74 @@
-Sure! Here's a documentation template for a Car Rental System:
+## Car Rental System - Documentation
 
-# Car Rental System Documentation
+### 1. Introduction
+The Car Rental System is a console-based application that allows users to manage a car rental service. It enables users to perform various operations such as viewing the available cars, issuing a car to customers, returning rented cars, adding new cars to the system, and deleting cars from the inventory. The system is implemented using C++ programming language and utilizes a linked list data structure to store information about different car categories: sedan, SUV, and truck.
 
-## Table of Contents
-1. Introduction
-    - Purpose
-    - Scope
-    - Definitions, Acronyms, and Abbreviations
+### 2. Features
+The Car Rental System offers the following key features:
 
-2. System Overview
-    - System Architecture
-    - High-Level Description
-    - Features
+#### 2.1 View Car List
+Allows users to view the list of available cars categorized into sedan, SUV, and truck. Users can see detailed information about each car, including car model, transmission type, seating capacity, fuel type, license plate number, car ID, base rental rate, and fuel policy.
 
-3. System Requirements
-    - Functional Requirements
-    - Non-Functional Requirements
+#### 2.2 Issue Car
+Enables users to rent a car by providing their personal information and rental details, including pick-up location, pick-up date, pick-up time, and rental period in days. After the car is issued to the customer, a receipt is generated showing the car details, rental cost, and customer information.
 
-4. System Design
-    - Class Diagram
-    - Data Flow Diagram (DFD)
-    - Use Case Diagram
-    - Sequence Diagrams
+#### 2.3 Return Car
+Allows customers to return their rented cars by providing drop-off details, including drop-off date, drop-off time, and drop-off location. The system generates a receipt displaying the car details, rental cost, and customer information for confirmation.
 
-5. User Guide
-    - Installation
-    - User Interface Overview
-    - Using the Car Rental System
+#### 2.4 Add Car
+Allows the car rental company to add new cars to the system. Users can input car details, such as car model, transmission type, seating capacity, fuel type, license plate number, car ID, base rental rate, and fuel policy. The new car is added to the appropriate category (sedan, SUV, or truck).
 
-6. Administrator Guide
-    - Managing Car Inventory
-    - Handling Car Rentals
-    - Generating Reports
+#### 2.5 Delete Car
+Allows the car rental company to remove cars from the system by specifying the car ID. The car is deleted from the linked list corresponding to its category.
 
-7. Testing
-    - Test Plan
-    - Test Cases
+### 3. Implementation Details
+The Car Rental System is implemented using C++ programming language. It utilizes the following components:
 
-8. Known Issues and Limitations
+#### 3.1 Car Structure
+A `struct` called `Car` is defined to represent the properties of a car. It contains attributes such as car model, transmission type, seating capacity, fuel type, license plate number, car ID, base rental rate, and fuel policy.
 
-9. Future Enhancements
+#### 3.2 Node Structure
+A `struct` called `Node` is defined to create a linked list. It contains a `Car` object and a pointer to the next node.
 
-10. Conclusion
+#### 3.3 CarRental Class
+The `CarRental` class manages the car rental operations and contains the following member functions:
 
-## 1. Introduction
+- `insertCar`: Inserts a new car into the linked list corresponding to its category (sedan, SUV, or truck).
+- `findCar`: Searches for a car in the linked list based on its car ID and returns a pointer to the node containing the car.
+- `deleteCar`: Deletes a car from the linked list based on its car ID.
+- `displayCarList`: Displays the list of cars in a specific category (sedan, SUV, or truck) along with their details.
+- `viewCarList`: Allows users to view the car lists categorized by type and select a car to rent.
+- `receipt`: Generates a receipt after issuing a car to a customer, displaying car details, rental cost, and customer information.
+- `issueCar`: Allows users to rent a car by providing personal information and rental details.
+- `returnCar`: Allows customers to return their rented cars and generates a receipt for confirmation.
+- `addCar`: Enables the car rental company to add new cars to the system.
+- `deleteCar`: Allows the car rental company to delete cars from the system.
 
-### Purpose
-The Car Rental System documentation provides a detailed overview of the system's architecture, features, requirements, design, user guide, administrator guide, testing, known issues, future enhancements, and conclusion.
+#### 3.4 Main Function
+The `main` function is the entry point of the program. It creates an instance of the `CarRental` class and presents a menu to the user. Users can choose from different options to perform specific operations on the car rental system.
 
-### Scope
-The Car Rental System allows customers to view available cars, rent cars for a specific period, and return them after the rental period. Administrators can manage the car inventory, handle car rentals, and generate reports.
+### 4. Usage Instructions
+To use the Car Rental System, follow these steps:
 
-### Definitions, Acronyms, and Abbreviations
-- Car Rental System: Refers to the software application that enables car rental operations.
-- UI: User Interface
-- API: Application Programming Interface
-- DFD: Data Flow Diagram
-- CRUD: Create, Read, Update, Delete
+1. Run the program: Compile and execute the C++ code in a C++ compiler. The program will display a menu with different options for managing the car rental system.
 
-## 2. System Overview
+2. View Car List: Select option `1` from the menu to view the list of available cars categorized as sedan, SUV, or truck.
 
-### System Architecture
-The Car Rental System is built using a client-server architecture. The client interacts with the system through a graphical user interface (GUI), while the server handles data storage, retrieval, and business logic.
+3. Issue Car: Select option `2` from the menu to rent a car. Provide personal information and rental details, and the system will issue a car to the customer. A receipt will be generated displaying the car details, rental cost, and customer information.
 
-### High-Level Description
-The Car Rental System enables customers to view available cars, select cars for rental, and provide personal details for the rental process. The system allows administrators to add, delete, and manage car inventory, handle customer rentals, and generate reports for monitoring.
+4. Return Car: Select option `3` from the menu to return a rented car. Provide drop-off details such as drop-off date, drop-off time, and drop-off location. A receipt will be generated for confirmation.
 
-### Features
-- View Car Inventory: Customers can view a list of available cars based on categories such as sedan, SUV, and truck.
-- Rent a Car: Customers can select a car for rental, provide personal details, and complete the rental process.
-- Return a Car: Customers can return a rented car by providing drop-off details.
-- Add/Remove Cars: Administrators can add new cars to the system or remove existing ones based on availability and demand.
-- Rental Management: Administrators can manage car rentals, check return dates, and handle late returns.
-- Report Generation: Administrators can generate reports on car availability, rental history, revenue, and more.
+5. Add Car: Select option `4` from the menu to add a new car to the rental system. Enter car details such as car model, transmission type, seating capacity, fuel type, license plate number, car ID, base rental rate, and fuel policy.
 
-## 3. System Requirements
+6. Delete Car: Select option `5` from the menu to delete a car from the rental system. Provide the car ID of the car to be deleted.
 
-### Functional Requirements
-1. View Car Inventory: Customers can view cars available for rental in different categories.
-2. Rent a Car: Customers can rent a car by selecting a car, providing rental details, and making payment.
-3. Return a Car: Customers can return a rented car by providing drop-off details.
-4. Add/Remove Cars: Administrators can add new cars or remove existing ones from the system.
-5. Rental Management: Administrators can manage car rentals, including late returns and extensions.
-6. Report Generation: Administrators can generate various reports for monitoring and analysis.
+7. Exit: Select option `6` from the menu to exit the program.
 
-### Non-Functional Requirements
-1. Usability: The UI should be user-friendly and easy to navigate for customers and administrators.
-2. Performance: The system should handle multiple concurrent requests efficiently.
-3. Security: Customer and rental data should be stored securely and accessible only to authorized personnel.
-4. Reliability: The system should be highly reliable, minimizing downtime and data loss.
-5. Scalability: The system should be scalable to accommodate increasing demands.
+### 5. Conclusion
+The Car Rental System is a simple console-based application that allows users to manage car rental operations efficiently. By utilizing linked lists to store car information, it provides a flexible and dynamic way to add and remove cars from the inventory. The system's menu-driven interface makes it user-friendly and easy to navigate for both car rental companies and customers.
 
-## 4. System Design
+Please note that this documentation provides an overview of the Car Rental System's functionality, and the actual implementation can be further enhanced and expanded to meet specific business requirements.
 
-### Class Diagram
-The Class Diagram represents the classes and their relationships in the Car Rental System.
-
-### Data Flow Diagram (DFD)
-The DFD shows the flow of data between various components of the Car Rental System.
-
-### Use Case Diagram
-The Use Case Diagram illustrates the interactions between users and the system.
-
-### Sequence Diagrams
-The Sequence Diagrams depict the sequence of interactions between different components.
-
-## 5. User Guide
-
-### Installation
-Provide instructions for installing the Car Rental System on the client's machine.
-
-### User Interface Overview
-Explain the user interface and its key components for customers.
-
-### Using the Car Rental System
-Step-by-step guide for customers to rent a car, view rental history, and return a car.
-
-## 6. Administrator Guide
-
-### Managing Car Inventory
-Instructions for administrators to add new cars, remove cars, and update car details.
-
-### Handling Car Rentals
-Guidance for administrators to manage car rentals, track return dates, and handle late returns.
-
-### Generating Reports
-Instructions for generating reports on car availability, rental history, and revenue.
-
-## 7. Testing
-
-### Test Plan
-Outline the test strategy, objectives, and scope.
-
-### Test Cases
-Provide detailed test cases covering all aspects of the Car Rental System.
-
-## 8. Known Issues and Limitations
-
-List any known issues, bugs, or limitations of the current version.
-
-## 9. Future Enhancements
-
-Suggest potential improvements and features for future releases.
-
-## 10. Conclusion
-
-Summarize the Car Rental System, its capabilities, and benefits.
-
----
-Note: The documentation provided here is a template, and you may need to tailor it based on the specific requirements and details of your Car Rental System. Make sure to include relevant diagrams, code snippets, and other necessary details to make the documentation comprehensive and easy to understand for the intended audience.
-
-
-
-
-<img width="504" alt="image" src="https://github.com/Zxynerprogram09/Car-Rental-System/assets/129655847/7318ae61-b7ed-4211-a1d5-0094efd94c99">
-
-
+Collaborators:                    Email               Github
+Marasigan Xyzon Ezekiel R.  xyzonezm98@gmailcom  Zxynerprogram09     
+Carandang Angelica D.                               aica
