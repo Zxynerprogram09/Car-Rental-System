@@ -6,7 +6,7 @@ using namespace std;
 // Structure to represent a car
 struct Car
 {
-    // Car details
+    // Defines the properties of a car
     string carmodel;
     string transmissionType;
     int seatingCapacity;
@@ -16,7 +16,7 @@ struct Car
     float baseRentalRate;
     string fuelPolicy;
 };
-// Structure to represent a node in the linked list
+// Structure to create a linkedlist
 struct Node
 {
     Car car;
@@ -236,7 +236,7 @@ public:
 
         float rentalCost = issuedCar.baseRentalRate * rentalPeriod;
         cout << "\n\t\t\t\tPAYMENT SUMMARY";
-        cout << "\n\t\t\t\t    Rental Cost: ₱" << rentalCost;
+        cout << "\n\t\t\t\t    Rental Cost: â‚±" << rentalCost;
         cout << "\n\t\t\t\t    Fuel Policy: Full to Full ";
         cout << endl;
 
@@ -417,6 +417,7 @@ public:
         cin >> dropOffTime;
         cout << "\t\t\t\t    Drop-off Location: ";
         cin >> dropOffLocation;
+        getch();
 
         cout << "\n\t\t\t\t  Return Confirmation (Y/N): ";
         cin >> returnConfirmation;
@@ -720,4 +721,3 @@ int main()
 
     return 0;
 }
-
